@@ -3,6 +3,7 @@ import Link from "next/link";
 import Menu from "../Menu";
 import MobileMenu from "../MobileMenu";
 import OffCanvas from "../OffCanvas";
+import { headerData } from "@/data/layout/header";
 
 export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isOffCanvas, handleOffCanvas }: any) {
     return (
@@ -15,7 +16,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isOffC
                     <div className="container py-3 px-0">
                         <Link className="navbar-brand d-flex main-logo align-items-center ms-lg-0 ms-md-5 ms-3" href="/">
                             <img src="/assets/imgs/template/favicon.svg" alt="infinia" />
-                            <span className="fs-4 ms-2">william.design</span>
+                            <span className="fs-4 ms-2">{headerData.logoText}</span>
                         </Link>
                         <div className="d-none d-lg-flex">
                             <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -24,18 +25,11 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isOffC
                         </div>
                         <div className="navbar-social d-flex align-items-center pe-5 pe-lg-0 me-5 me-lg-0">
                             <div className="d-md-flex d-none gap-3">
-                                <Link href="/http://facebook.com">
-                                    <i className="ri-facebook-circle-fill fs-18" />
-                                </Link>
-                                <Link href="/http://twitter.com">
-                                    <i className="ri-twitter-x-fill fs-18" />
-                                </Link>
-                                <Link href="/http://linkedin.com">
-                                    <i className="ri-linkedin-fill fs-18" />
-                                </Link>
-                                <Link href="/http://github.com">
-                                    <i className="ri-github-fill fs-18" />
-                                </Link>
+                                {headerData.socialLinks.map((social, index) => (
+                                    <Link key={index} href={social.url} target="_blank" rel="noopener noreferrer" title={social.platform}>
+                                        <i className={`${social.icon} fs-18`} />
+                                    </Link>
+                                ))}
                             </div>
                             <div className="burger-icon burger-icon-white border rounded-3" onClick={handleMobileMenu}>
                                 <span className="burger-icon-top" />

@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation" // usePathname is more suited for client-side path checking
+import { headerData } from "@/data/layout/header";
 
 export default function Menu() {
 	const pathname = usePathname()
@@ -7,6 +8,18 @@ export default function Menu() {
 	return (
 		<>
 			<ul className="navbar-nav me-auto mb-2 mb-lg-0">
+				{headerData.navLinks.map((link, index) => (
+					<li className="nav-item" key={index}>
+						<Link
+							href={link.path}
+							className={pathname === link.path ? "nav-link active" : "nav-link"}
+						>
+							{link.name}
+						</Link>
+					</li>
+				))}
+			</ul>
+			{/* <ul className="navbar-nav me-auto mb-2 mb-lg-0">
 				<li className="nav-item">
 					<Link href="/" className={pathname === "/" ? "nav-link active" : "nav-link"}>
 						Home
@@ -37,7 +50,7 @@ export default function Menu() {
 						Contact
 					</Link>
 				</li>
-			</ul>
+			</ul> */}
 		</>
 	)
 }
