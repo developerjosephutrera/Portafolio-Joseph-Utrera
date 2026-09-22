@@ -1,6 +1,8 @@
 import Link from "next/link"
 import { heroData } from "../../data/hero"
 
+<meta name="google-site-verification" content="e1ss23jiXw-zvm6ji2SoKDgBvf0MtGZtGv_V7JJ5L98" />
+
 export default function Home1() {
 	return (
 		<>
