@@ -14388,18 +14388,58 @@ strong {
 
 
 /* =========================================
+   Hero
+========================================= */
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.hero-action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================================
    Hero responsive
 ========================================= */
 
 @media (max-width: 767px) {
+    .hero-home {
+        padding-top: 75px !important;
+        padding-bottom: 75px !important;
+    }
+
     .hero-title {
         font-size: 3.5rem !important;
         line-height: 1.08 !important;
         letter-spacing: -1.5px;
     }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        margin-top: 8px;
+    }
+
+    .hero-action-btn {
+        width: 100%;
+        max-width: 230px;
+        margin: 0 !important;
+    }
 }
 
 @media (max-width: 480px) {
+    .hero-home {
+        padding-top: 65px !important;
+        padding-bottom: 65px !important;
+    }
+
     .hero-title {
         font-size: 3.25rem !important;
         line-height: 1.08 !important;
@@ -14408,6 +14448,10 @@ strong {
 }
 
 @media (max-width: 380px) {
+    .hero-home {
+        padding-top: 60px !important;
+    }
+
     .hero-title {
         font-size: 3rem !important;
         line-height: 1.08 !important;

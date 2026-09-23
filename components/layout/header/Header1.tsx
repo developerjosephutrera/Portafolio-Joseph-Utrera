@@ -9,7 +9,13 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isOffC
     return (
         <>
             <header>
-                <nav className={`navbar navbar-expand-lg navbar-light w-100 flex-nowrap z-999 p-0 ${scroll ? "navbar-stick" : ""}`} style={{ position: `${scroll ? "fixed" : "relative"}`, top: `${scroll ? "0" : "auto"}` }}>
+                <nav
+                    className={`navbar navbar-expand-lg navbar-light w-100 flex-nowrap z-999 p-0 ${scroll ? "navbar-stick" : ""}`}
+                    style={{
+                        position: "sticky",
+                        top: "0",
+                    }}
+                >
                     <a href="#" className="navbar-menu p-4 text-center square-100 menu-tigger icon_80 icon-shape d-none d-md-flex" data-bs-target=".offCanvas__info" aria-controls="offCanvas__info" onClick={handleOffCanvas}>
                         <i className="ri-menu-2-line" />
                     </a>
