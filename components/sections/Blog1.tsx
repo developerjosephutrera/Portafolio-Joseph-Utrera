@@ -80,10 +80,6 @@ export default function Blog1() {
                                             {post.title}
                                         </h5>
 
-                                        <p className="blog-card__description fs-6">
-                                            {post.description}
-                                        </p>
-
                                         <Link
                                             href={post.link}
                                             className="link-overlay position-absolute top-0 start-0 w-100 h-100"
