@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { heroData } from "../../data/hero"
+import { heroData } from "../../data/sections/hero"
 
 export default function Home1() {
 	return (
