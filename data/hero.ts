@@ -15,7 +15,7 @@ export const heroData = {
   },
   experienceText: "Experiencia en tecnologías de desarrollo web:",
   techIcons: [
-    { name: "Python", src: "/assets/imgs/icons/python-5.svg" },
+    { name: "Python", src: "/assets/imgs/icons/python-5.svg", },
     { name: "React", src: "/assets/imgs/icons/react-native-1.svg" },
     { name: "Next.js", src: "/assets/imgs/icons/next-js.svg" },
     { name: "HTML", src: "/assets/imgs/icons/html-1.svg" },
