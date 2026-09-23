@@ -10,7 +10,7 @@ export default function Home1() {
 					<div className="row">
 						<div className="col-lg-6 col-md-12">
 							<span className="text-dark">{heroData.greeting}</span>
-							<h1 className="ds-2 mb-3">{heroData.headline}<span className="text-primary-1"> {heroData.headline2}</span></h1>
+							<h1 className="ds-2 mb-3 hero-title">{heroData.headline}<span className="text-primary-1"> {heroData.headline2}</span></h1>
 							<p className="text-300 mb-6">{heroData.description}</p>
 							<Link href={heroData.buttons.primary.link} className="btn btn-gradient me-2" target="_blank">
 								{heroData.buttons.primary.label}

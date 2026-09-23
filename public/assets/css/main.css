@@ -14385,3 +14385,31 @@ strong {
     margin-bottom: 0;
     line-height: 1.4;
 }
+
+
+/* =========================================
+   Hero responsive
+========================================= */
+
+@media (max-width: 767px) {
+    .hero-title {
+        font-size: 3.5rem !important;
+        line-height: 1.08 !important;
+        letter-spacing: -1.5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 3.25rem !important;
+        line-height: 1.08 !important;
+        letter-spacing: -1.2px;
+    }
+}
+
+@media (max-width: 380px) {
+    .hero-title {
+        font-size: 3rem !important;
+        line-height: 1.08 !important;
+    }
+}
