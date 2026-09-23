@@ -29,7 +29,11 @@ const dmMono = DM_Mono({
 export const metadata: Metadata = {
     title: "Zelio - Personal Portfolio Template",
     description: "Zelio - Personal Portfolio Template",
+    verification: {
+    google: "e1ss23jiXw-zvm6ji2SoKDgBvf0MtGZtGv_V7JJ5L98",
+  },
 };
+
 
 export default function RootLayout({
     children,
