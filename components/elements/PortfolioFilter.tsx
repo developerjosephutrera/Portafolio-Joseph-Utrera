@@ -2,6 +2,7 @@
 import Isotope from "isotope-layout"
 import Link from "next/link"
 import { useCallback, useEffect, useRef, useState } from "react"
+import { projects1Data } from "../../data/sections/projects1";
 
 export default function PortfolioFilter() {
 	// Isotope
@@ -13,14 +14,18 @@ export default function PortfolioFilter() {
 			isotope.current = new Isotope(".masonry-active", {
 				itemSelector: ".filter-item",
 				percentPosition: true,
-				masonry: {
-					columnWidth: ".filter-item",
-				},
+				layoutMode: "fitRows",
 			})
 		}, 1000)
 
-		// Cleanup on unmount
-		return () => clearTimeout(timeout)
+		return () => {
+			clearTimeout(timeout)
+
+			if (isotope.current) {
+				isotope.current.destroy()
+				isotope.current = null
+			}
+		}
 	}, [])
 
 	useEffect(() => {
@@ -41,79 +46,63 @@ export default function PortfolioFilter() {
 			<div className="container">
 				<div className="text-start">
 					<div className="button-group filter-button-group filter-menu-active">
-						<button className={activeBtn("*")} onClick={handleFilterKeyChange("*")}>All Projects</button>
-						<button className={activeBtn("brand")} onClick={handleFilterKeyChange("brand")}>Branding</button>
-						<button className={activeBtn("webdesign")} onClick={handleFilterKeyChange("webdesign")}>Web Design</button>
-						<button className={activeBtn("ui")} onClick={handleFilterKeyChange("ui")}>UI/UX</button>
-						<button className={activeBtn("app")} onClick={handleFilterKeyChange("app")}>App Dev</button>
+						{projects1Data.categories.map((category, index) => {
+							// Isotope espera el valor sin el punto para el estado interno, excepto para el "*"
+							const filterValue = category.filterClass === "*" ? "*" : category.filterClass.replace(".", "");
+
+							return (
+								<button
+									key={index}
+									className={activeBtn(filterValue)}
+									onClick={handleFilterKeyChange(filterValue)}
+								>
+									{category.name}
+								</button>
+							);
+						})}
 					</div>
 				</div>
 				<div className="row masonry-active justify-content-between mt-6">
-					<div className="grid-sizer" />
-					<div className="filter-item col-lg-6 col-12 brand ui app">
-						<div className="project-item rounded-4 overflow-hidden position-relative p-md-4 p-3 bg-white">
-							<Link href="/work-single">
-								<img className="rounded-3 w-100 zoom-img" src="/assets/imgs/projects/projects-1/img-1.png" alt="infinia" />
-							</Link>
-							<div className="d-flex align-items-center mt-4">
-								<Link href="/work-single" className="project-card-content">
-									<h3 className="fw-semibold">Photo App UI/UX</h3>
-									<p>Bokeh network</p>
+					{projects1Data.items.map((item) => (
+						<div
+							key={item.id}
+							className={`filter-item col-lg-6 col-12 ${item.categoryClass}`}
+						>
+							<div className="project-item rounded-4 overflow-hidden position-relative p-md-4 p-3 bg-white">
+
+								<Link
+									href={item.link}
+									className="project-card-image d-block rounded-3 overflow-hidden"
+								>
+									<img
+										className="w-100 h-100 zoom-img"
+										src={item.image}
+										alt={item.title}
+									/>
 								</Link>
-								<Link href="/work-single" className="project-card-icon icon-shape ms-auto icon-md rounded-circle">
-									<i className="ri-arrow-right-up-line" />
-								</Link>
+
+								<div className="d-flex align-items-center mt-4">
+
+									<Link
+										href={item.link}
+										className="project-card-content"
+									>
+										<h3 className="fw-semibold">{item.title}</h3>
+										<p>{item.client}</p>
+									</Link>
+
+									<Link
+										href={item.link}
+										className="project-card-icon icon-shape ms-auto icon-md rounded-circle"
+									>
+										<i className="ri-arrow-right-up-line" />
+									</Link>
+
+								</div>
+
 							</div>
 						</div>
-					</div>
-					<div className="filter-item col-lg-6 col-12 webdesign brand dataanalysis brand">
-						<div className="project-item rounded-4 overflow-hidden position-relative p-md-4 p-3 bg-white">
-							<Link href="/work-single">
-								<img className="rounded-3 w-100 zoom-img" src="/assets/imgs/projects/projects-1/img-2.png" alt="infinia" />
-							</Link>
-							<div className="d-flex align-items-center mt-4">
-								<Link href="/work-single" className="project-card-content">
-									<h3 className="fw-semibold">Mobile App Design</h3>
-									<p>Tech Innovators Inc.</p>
-								</Link>
-								<Link href="/work-single" className="project-card-icon icon-shape ms-auto icon-md rounded-circle">
-									<i className="ri-arrow-right-up-line" />
-								</Link>
-							</div>
-						</div>
-					</div>
-					<div className="filter-item col-lg-6 col-12 ui app">
-						<div className="project-item rounded-4 overflow-hidden position-relative p-md-4 p-3 bg-white">
-							<Link href="/work-single">
-								<img className="rounded-3 w-100 zoom-img" src="/assets/imgs/projects/projects-1/img-3.png" alt="infinia" />
-							</Link>
-							<div className="d-flex align-items-center mt-4">
-								<Link href="/work-single" className="project-card-content">
-									<h3 className="fw-semibold">Interaction Design</h3>
-									<p>HealthTrack Solutions</p>
-								</Link>
-								<Link href="/work-single" className="project-card-icon icon-shape ms-auto icon-md rounded-circle">
-									<i className="ri-arrow-right-up-line" />
-								</Link>
-							</div>
-						</div>
-					</div>
-					<div className="filter-item col-lg-6 col-12 app app dataanalysis brand">
-						<div className="project-item rounded-4 overflow-hidden position-relative p-md-4 p-3 bg-white">
-							<Link href="/work-single">
-								<img className="rounded-3 w-100 zoom-img" src="/assets/imgs/projects/projects-1/img-4.png" alt="infinia" />
-							</Link>
-							<div className="d-flex align-items-center mt-4">
-								<Link href="/work-single" className="project-card-content">
-									<h3 className="fw-semibold">Design Consultation</h3>
-									<p>Creative Pulse Studios</p>
-								</Link>
-								<Link href="/work-single" className="project-card-icon icon-shape ms-auto icon-md rounded-circle">
-									<i className="ri-arrow-right-up-line" />
-								</Link>
-							</div>
-						</div>
-					</div>
+					))}
 				</div>
 			</div>
 		</>
