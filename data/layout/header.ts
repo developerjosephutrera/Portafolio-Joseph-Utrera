@@ -5,7 +5,7 @@ export const headerData = {
   // Enlaces principales del menú
   navLinks: [
     { name: "Inicio", path: "/" },
-    { name: "Servicios", path: "/services" },
+    { name: "Servicios", path: "/servicios" },
     { name: "Portafolio", path: "/work" },
     // { name: "Pricing", path: "#pricing" }, // Por ahora no ofrezco ningún servicio de pago, así que lo comentaré
     // { name: "Blog", path: "#blog" },       // Por ahora no tengo un blog activo, así que lo comentaré

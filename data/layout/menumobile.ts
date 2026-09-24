@@ -5,7 +5,7 @@ export const mobileMenuData = {
   // Los enlaces que se mostrarán en la lista desplegable
   navLinks: [
     { name: "Inicio", path: "/" },
-    { name: "Servicios", path: "/services" },
+    { name: "Servicios", path: "/servicios" },
     { name: "Portafolio", path: "/work" },
     // { name: "Pricing", path: "#pricing" },
     // { name: "Blog", path: "#blog" },

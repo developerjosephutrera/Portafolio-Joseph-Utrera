@@ -1,7 +1,7 @@
 export const contact1Data = {
-    title: "Pongamonos en contacto",
-    subtitle1: "Siempre estoy buscando nuevas oportunidades para colaborar en proyectos innovadores. ",
-    subtitle2: "Ya sea que necesites desarrollo web, optimización de infraestructura o simplemente hablar sobre tecnología.",
+    title: "¿Tienes un proyecto en mente?",
+    subtitle1: "Cuéntame qué necesitas y conversemos sobre cómo puedo ayudarte. Puedes escribirme por WhatsApp, ",
+    subtitle2: "correo electrónico o completar el formulario.",
 
     // Información de contacto del panel izquierdo
     contactInfo: [
@@ -35,7 +35,7 @@ export const contact1Data = {
 
     // Textos del formulario
     form: {
-        title: "Déjame un mensaje",
+        title: "Envíame un mensaje",
         nameLabel: "Tu nombre *",
         namePlaceholder: "Ej: Cesar Rodríguez",
         emailLabel: "Correo electrónico *",
