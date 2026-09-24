@@ -6,7 +6,7 @@ export const mobileMenuData = {
   navLinks: [
     { name: "Inicio", path: "/" },
     { name: "Servicios", path: "/servicios" },
-    { name: "Portafolio", path: "/work" },
+    { name: "Portafolio", path: "/proyectos" },
     // { name: "Pricing", path: "#pricing" },
     // { name: "Blog", path: "#blog" },
     { name: "Contacto", path: "#contact" }

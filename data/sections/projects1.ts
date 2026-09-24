@@ -5,10 +5,10 @@ export const projects1Data = {
         "Una selección de proyectos en los que he participado, aplicando desarrollo web, optimización, infraestructura, seguridad y administración de plataformas digitales.",
 
     topButtonText: "Ver todos los proyectos",
-    topButtonLink: "/work",
+    topButtonLink: "/proyectos",
 
     bottomButtonText: "Ver todos",
-    bottomButtonLink: "/work",
+    bottomButtonLink: "/proyectos",
 
     categories: [
         {
