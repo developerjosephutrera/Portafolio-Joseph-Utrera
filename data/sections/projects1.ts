@@ -36,7 +36,7 @@ export const projects1Data = {
             client: "WordPress · Infraestructura · SEO técnico",
             categoryClass: "web-design",
             image: "/assets/imgs/projects/projects-1/uaden.png",
-            link: "/work/uaden",
+            link: "/proyectos",
         },
         {
             id: 2,
@@ -44,7 +44,7 @@ export const projects1Data = {
             client: "HTML · CSS · JavaScript · Integraciones",
             categoryClass: "web-design",
             image: "/assets/imgs/projects/projects-1/disney.png",
-            link: "/work/diplomado-disney",
+            link: "/proyectos",
         },
         {
             id: 3,
@@ -52,7 +52,7 @@ export const projects1Data = {
             client: "Landing page · WordPress",
             categoryClass: "web-design",
             image: "/assets/imgs/projects/projects-1/playa-bonita.png",
-            link: "/work/playa-bonita",
+            link: "/proyectos",
         },
         {
             id: 4,
@@ -60,7 +60,7 @@ export const projects1Data = {
             client: "Landing page · Optimización web",
             categoryClass: "web-design",
             image: "/assets/imgs/projects/projects-1/fucae-america-28.png",
-            link: "/work/fucae-america-28",
+            link: "/proyectos",
         },
         {
             id: 5,
@@ -68,7 +68,7 @@ export const projects1Data = {
             client: "Next.js · FastAPI · MySQL",
             categoryClass: "app-web",
             image: "/assets/imgs/projects/projects-1/comercializadora-jc.png",
-            link: "/work/comercializadora-jc",
+            link: "/proyectos",
         },
         {
             id: 6,
@@ -76,7 +76,7 @@ export const projects1Data = {
             client: "Python · YOLO11 · BoT-SORT",
             categoryClass: "app-dev",
             image: "/assets/imgs/projects/projects-1/yolo-event-detection.png",
-            link: "/work/deteccion-eventos-yolo",
+            link: "/proyectos",
         },
         {
             id: 7,
@@ -84,7 +84,7 @@ export const projects1Data = {
             client: "Centros de acopio · Información en tiempo real",
             categoryClass: "app-web",
             image: "/assets/imgs/projects/projects-1/ayuda-activa-venezuela.png",
-            link: "/work/ayuda-activa-venezuela",
+            link: "/proyectos",
         },
     ],
 };
