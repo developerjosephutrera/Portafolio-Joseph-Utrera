@@ -27,11 +27,23 @@ export const projects1Data = {
             name: "Desarrollo de apps",
             filterClass: ".app-dev",
         },
+        {
+            name: "ERP & Odoo",
+            filterClass: ".erp-odoo",
+        },
     ],
 
     items: [
         {
             id: 1,
+            title: "Soporte y Parametrización Odoo — USP CARGA",
+            client: "Odoo ERP · Inventarios · BoM · Rutas de producción",
+            categoryClass: "erp-odoo",
+            image: "/assets/imgs/projects/projects-1/odoo.png",
+            link: "/proyectos",
+        },
+        {
+            id: 2,
             title: "Portal Corporativo UADEN",
             client: "WordPress · Infraestructura · SEO técnico",
             categoryClass: "web-design",
@@ -39,7 +51,7 @@ export const projects1Data = {
             link: "/proyectos",
         },
         {
-            id: 2,
+            id: 3,
             title: "Diplomado Disney",
             client: "HTML · CSS · JavaScript · Integraciones",
             categoryClass: "web-design",
@@ -47,7 +59,7 @@ export const projects1Data = {
             link: "/proyectos",
         },
         {
-            id: 3,
+            id: 4,
             title: "Playa Bonita",
             client: "Landing page · WordPress",
             categoryClass: "web-design",
@@ -55,7 +67,7 @@ export const projects1Data = {
             link: "/proyectos",
         },
         {
-            id: 4,
+            id: 5,
             title: "FUCAE — América 28",
             client: "Landing page · Optimización web",
             categoryClass: "web-design",
@@ -63,7 +75,7 @@ export const projects1Data = {
             link: "/proyectos",
         },
         {
-            id: 5,
+            id: 6,
             title: "Sistema de Gestión — Comercializadora JC",
             client: "Next.js · FastAPI · MySQL",
             categoryClass: "app-web",
@@ -71,7 +83,7 @@ export const projects1Data = {
             link: "/proyectos",
         },
         {
-            id: 6,
+            id: 7,
             title: "Detección de Eventos con YOLO",
             client: "Python · YOLO11 · BoT-SORT",
             categoryClass: "app-dev",
@@ -79,7 +91,7 @@ export const projects1Data = {
             link: "/proyectos",
         },
         {
-            id: 7,
+            id: 8,
             title: "Ayuda Activa Venezuela",
             client: "Centros de acopio · Información en tiempo real",
             categoryClass: "app-web",
