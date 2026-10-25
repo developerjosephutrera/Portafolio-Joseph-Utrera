@@ -78,27 +78,34 @@ export const resume1Data = {
     experience: [
         {
             id: 1,
-            date: "Julio 2026 - Presente",
+            date: "Octubre 2026 - Presente",
+            title: "Analista de Soporte Odoo",
+            company: "USP CARGA c.a",
+            description: "Parametrización de módulos, gestión de inventarios, BoM y rutas de producción, resolución de tickets y capacitación de usuarios en Odoo."
+        },
+        {
+            id: 2,
+            date: "Enero 2021 - Julio 2026",
             title: "Desarrollador Full-Stack / Arquitecto",
             company: "Comercializadora J&C",
             description: "Desarrollo PWA con Next.js, backend en FastAPI, MySQL, CI/CD y ciberseguridad."
         },
         {
-            id: 2,
+            id: 3,
             date: "2026",
             title: "Desarrollador Freelance",
             company: "Proyectos de IA & Web",
             description: "Implementación de modelo YOLO para Amazonas365 y plataforma Ayuda Activa Venezuela."
         },
         {
-            id: 3,
+            id: 4,
             date: "Dic. 2025 - Jun. 2026",
             title: "Líder Web Developer",
             company: "UADEN",
             description: "Maquetación web en WordPress, SEO técnico, gestión de servidores y hardening de seguridad."
         },
         {
-            id: 4,
+            id: 5,
             date: "2024 - 2025",
             title: "Soporte Técnico IT (Pasantías)",
             company: "Dirección Ejecutiva de la Magistratura",

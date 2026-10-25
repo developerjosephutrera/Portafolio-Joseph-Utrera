@@ -12,6 +12,12 @@ export default function Resume1() {
         ? resume1Data.education 
         : resume1Data.education.slice(0, 5); // Muestra solo los primeros 5 elementos si showAllEducation es false
 
+    // Mismo comportamiento para la experiencia, mostrando solo las primeras 4
+    const [showAllExperience, setShowAllExperience] = useState(false);
+    const displayedExperience = showAllExperience
+        ? resume1Data.experience
+        : resume1Data.experience.slice(0, 4);
+
     return (
         <>
             <section id="resume" className="section-resume-1 position-relative pt-150 overflow-hidden" data-background="/assets/imgs/projects/projects-1/background.png">
@@ -87,7 +93,7 @@ export default function Resume1() {
                                     <h3 className="fw-semibold mb-0 border-bottom border-600 border-3 pb-2 w-100">Experiencia</h3>
                                 </div>
                                 <div className="resume-card-body">
-                                    {resume1Data.experience.map((item) => (
+                                    {displayedExperience.map((item) => (
                                         <div key={item.id} className="resume-card-item px-4 py-3 mt-5">
                                             <p className="fw-extra-bold text-linear-1 mb-2">{item.date}</p>
                                             <h5>{item.title}</h5>
@@ -95,6 +101,19 @@ export default function Resume1() {
                                             <p className="text-400 fs-7 mb-0">{item.description}</p>
                                         </div>
                                     ))}
+
+                                    {/* Botón para Desplegar más / Ver menos */}
+                                    {resume1Data.experience.length > 4 && (
+                                        <div className="text-center mt-5">
+                                            <button
+                                                onClick={() => setShowAllExperience(!showAllExperience)}
+                                                className="text-primary-1 fw-bold bg-transparent border-0 p-0 fs-6"
+                                                style={{ cursor: "pointer", transition: "all 0.3s ease" }}
+                                            >
+                                                {showAllExperience ? "− Ver menos" : "+ Desplegar más"}
+                                            </button>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                         </div>
